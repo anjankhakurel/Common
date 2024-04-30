@@ -2,27 +2,30 @@ package bubblesort;
 
 public class OptimizeBubbleSort {
     public static void main(String[] args) {
-        int[] Everest = {9, 5, 1, 3, 6};
+        int[] everest = {5,4,3,2,1};
         OptimizeBubbleSort anjana = new OptimizeBubbleSort();
-        anjana.mount(Everest);
-        for (int i = 0; i < Everest.length; i++) {
-            System.out.println(Everest[i]);
+        anjana.mount(everest);
+        for (int i = 0; i < everest.length; i++) {
+            System.out.println(everest[i]);
 
         }
     }
 
     public void mount(int[] array) {
         for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array.length - 1-i; j++) {
+            boolean swapped = false;
+            for (int j = 0; j < array.length - 1 - i; j++) {
                 if (array[j] > array[j + 1]) {
                     int temp = array[j];
                     array[j] = array[j + 1];
                     array[j + 1] = temp;
-
-
+                    swapped = true;
                 }
-
             }
+            if (swapped==false) {
+                System.out.println("noswappingoccured");
+                break;
+           }
         }
     }
 }
