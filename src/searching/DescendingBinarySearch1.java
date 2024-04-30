@@ -9,8 +9,6 @@ public class DescendingBinarySearch1 {
         System.out.println(result);
 
     }
-
-
     public boolean searchDescendingTarget (int[]array,int target){
         int start = 0;
         int end = array.length-1;
