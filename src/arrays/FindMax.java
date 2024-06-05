@@ -8,10 +8,10 @@ public class FindMax {
         System.out.println("Maximim element of an array:" + max);
     }
     public int findMax(int[] thulo) {
-        int max = thulo[0];
+        int max = 0;
         for (int i = 1; i < thulo.length; i++) {
-            if (thulo[i] > max) {
-                max = thulo[i];
+            if (thulo[i] > thulo [max]) {
+                max = i;
 
             }
         }
